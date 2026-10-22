@@ -52,7 +52,7 @@ function EmailPage() {
   }
 
   function generate() {
-    if (!form.purpose.trim()) return toast.error("Please describe the purpose of the email.");
+    if (!form.purpose.trim()) { toast.error("Please describe the purpose of the email."); return; }
     run(
       `Recipient: ${form.recipient || "(unspecified)"}\nPurpose: ${form.purpose}\nKey points:\n${form.points || "(none)"}\nTone: ${form.tone}`,
       form.tone,

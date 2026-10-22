@@ -9,7 +9,7 @@ export function streamAi(request: Request, apiKey: string, system: string, messa
     baseURL: "https://ai.gateway.lovable.dev/v1",
     apiKey,
     headers: { "Lovable-API-Key": apiKey, "X-Lovable-AIG-SDK": "vercel-ai-sdk" },
-    fetch: async (input, init) => {
+    fetch: async (input: RequestInfo | URL, init?: RequestInit) => {
       const res = await fetch(input, init);
       runId ??= res.headers.get(RUN_ID) ?? undefined;
       return res;

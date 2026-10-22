@@ -35,7 +35,7 @@ function ResearchPage() {
   const [loading, setLoading] = useState(false);
 
   async function generate() {
-    if (!query.trim()) return toast.error("Enter a topic, question or text.");
+    if (!query.trim()) { toast.error("Enter a topic, question or text."); return; }
     setLoading(true);
     try {
       const text = await streamAI(SYSTEM, [{ role: "user", content: query }]);

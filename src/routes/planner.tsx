@@ -50,7 +50,7 @@ function PlannerPage() {
 
   async function generate() {
     const valid = tasks.filter((t) => t.name.trim());
-    if (!valid.length) return toast.error("Add at least one task.");
+    if (!valid.length) { toast.error("Add at least one task."); return; }
     setLoading(true);
     try {
       const today = new Date().toDateString();
