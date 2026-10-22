@@ -113,12 +113,10 @@ Users should independently verify important facts, research findings, and recomm
 ## Author
 
 Fulufhelo Emmanuel Tshikotshi
+
 Github:https://deskwise-day-planner.lovable.app/
 
 ## License
 
 This project is intended for educational,demonstration and portfolio purposes.
 
----
-
-Developed with Lovable — combining modern web development with AI-powered workplace productivity.
